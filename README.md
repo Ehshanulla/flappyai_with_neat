@@ -1,4 +1,5 @@
-# NEAT Flappy Bird ![bird1](https://github.com/user-attachments/assets/88e414de-6665-474a-89f9-c91f5d0ac167)
+# NEAT Flappy Bird ![bird1](https://github.com/user-attachments/assets/a801826e-16dc-4370-891d-d7eeae0ee346)
+
 
 
 An AI that learns to play Flappy Bird using the NEAT (NeuroEvolution of Augmenting Topologies) algorithm, implemented with Pygame.
@@ -30,20 +31,28 @@ cd Neat-Flappy-Bird
   ```bash
   pip install -r requirements.txt
 ```
+
 # Usage 🚀
 Training the AI
 ```bash
+# Default training (50 generations)
 python flappy_bird.py
-```
-Running with custom score limit
-```bash
-python flappy_bird.py --score_limit 50
+
+# With custom target score
+python flappy_bird.py --target_score 50
+
+# With limited generations
+python flappy_bird.py --generations 30
 ```
 Watching the best bird play
 After training completes, the best bird will automatically play. You can also run just the best bird:
 
 ```bash
+# Run the saved winner
 python play_winner.py
+
+# Run with custom score limit
+python play_winner.py --score_limit 75
 ```
 # Configuration ⚙️
 The NEAT algorithm can be configured by editing config-feedforward.txt:
